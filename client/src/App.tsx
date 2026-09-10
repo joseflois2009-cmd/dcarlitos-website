@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowDown, ChevronRight, Instagram, Menu, Phone, Star, X } from "lucide-react";
 
 const heroImage = "https://res.cloudinary.com/dqv3jpzxg/image/upload/v1764903333/43c1d495-173e-41b8-b585-8409ba6ef086.png";
@@ -27,6 +27,15 @@ const visitHighlights = [
 function App() {
   const [open, setOpen] = useState(false);
   const go = () => setOpen(false);
+  useEffect(() => {
+    const root = document.documentElement;
+    const move = (event: MouseEvent) => {
+      root.style.setProperty("--mx", `${event.clientX}px`);
+      root.style.setProperty("--my", `${event.clientY}px`);
+    };
+    window.addEventListener("pointermove", move, { passive: true });
+    return () => window.removeEventListener("pointermove", move);
+  }, []);
   return <div className="site">
     <nav className="nav"><div className="nav-inner">
       <a href="#inicio" className="brand" onClick={go}><img src={logo} alt="D' Carlitos Logo" /></a>
@@ -39,12 +48,12 @@ function App() {
 
     <div className="conversion-bar"><span>Este fin de semana te esperamos en D' Carlitos</span><a href="#reservas">Reserva tu mesa <ChevronRight size={14}/></a></div>
     <main>
-      <section id="inicio" className="hero" style={{backgroundImage:`url(${heroImage})`}}><div className="hero-shade"/><div className="hero-content">
-        <p className="eyebrow">RESTAURANTE CAMPESTRE · ICA</p><h1>Un lugar para<br/><em>disfrutar de verdad</em></h1><p className="hero-sub">Comida peruana, naturaleza y momentos que todos recordarán.</p>
-        <div className="hero-actions"><a className="btn btn-primary" href="#reservas">Quiero visitar</a><a className="btn btn-outline" href="#experiencia">Conoce el lugar</a></div><p className="hero-proof"><Star size={15} fill="currentColor"/> Un plan diferente para compartir en familia</p>
+      <section id="inicio" className="hero" style={{backgroundImage:`url(${heroImage})`}}><div className="hero-shade"/><div className="hero-orb"/><div className="hero-content">
+        <p className="eyebrow">D' CARLITOS · SUNAMPE, ICA</p><h1>Un día para<br/><em>comer, respirar y quedarse.</em></h1><p className="hero-sub">Una mesa entre jardines, platos peruanos y el tiempo que se disfruta mejor en compañía.</p>
+        <div className="hero-actions"><a className="btn btn-primary" href="#reservas">Reservar una mesa</a><a className="btn btn-outline" href="#experiencia">Descubrir la experiencia</a></div><p className="hero-proof"><Star size={15} fill="currentColor"/> El plan campestre que empieza en la mesa</p>
       </div><a className="scroll-cue" href="#nosotros" aria-label="Desplazarse"><ArrowDown size={22}/></a></section>
 
-      <section className="visit-strip"><div className="container visit-strip-inner"><div><span className="strip-label">TU PRÓXIMO PLAN</span><strong>Un domingo que sí se disfruta</strong></div><div className="strip-fact"><span>01</span><p><b>Sábados y domingos</b><br/>Ven a pasar el día con los tuyos</p></div><div className="strip-fact"><span>02</span><p><b>Para todas las edades</b><br/>Comida, naturaleza y entretenimiento</p></div><a href="#reservas" className="strip-link">Reserva tu mesa <ChevronRight size={15}/></a></div></section>
+      <section className="visit-strip"><div className="container visit-strip-inner"><div><span className="strip-label">TU PRÓXIMA VISITA</span><strong>Hazle espacio a un buen día</strong></div><div className="strip-fact"><span>01</span><p><b>Sábados y domingos</b><br/>Una mesa lista para compartir</p></div><div className="strip-fact"><span>02</span><p><b>Visita o celebra</b><br/>Restaurante abierto y eventos a medida</p></div><a href="#reservas" className="strip-link">Separar una mesa <ChevronRight size={15}/></a></div></section>
 
       <section id="nosotros" className="essence section-muted"><div className="container essence-heading"><div><p className="section-kicker">NUESTRA ESENCIA</p><h2>Vienes por la comida.<br/><em>Te quedas por el día.</em></h2></div><p className="essence-intro">Un restaurante campestre pensado para comer rico, respirar aire fresco y compartir sin mirar el reloj.</p></div><div className="container essence-grid">{essenceCards.map(([title,body,img,alt])=><article className="essence-card" key={title} style={{backgroundImage:`linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.78)),url(${img})`}} aria-label={alt}><div><span className="essence-photo-note">{alt}</span><h3>{title}</h3><p>{body}</p></div></article>)}</div></section>
 
@@ -54,7 +63,7 @@ function App() {
 
       <section className="reviews"><div className="container"><h2>Lo que dicen nuestros clientes</h2><p className="section-lead">Experiencias reales de familias que nos visitan cada fin de semana</p><div className="review-grid">{testimonials.map(([name,role,quote,seed])=><article className="review" key={name}><div className="review-stars">{[1,2,3,4,5].map(i=><Star key={i} size={15} fill="currentColor"/>)}</div><p>“{quote}”</p><div className="reviewer"><img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${seed}`} alt={name}/><div><h3>{name}</h3><span>{role}</span></div></div></article>)}</div></div></section>
 
-      <section id="reservas" className="reserve"><div className="container reserve-inner"><div><p className="section-kicker">TE ESTAMOS ESPERANDO</p><h2>Reserva tu mesa y ven a disfrutar</h2><p>Escríbenos para asegurar tu mesa este fin de semana. También contamos con un espacio independiente para eventos sociales y corporativos.</p></div><div className="reserve-actions"><a className="btn btn-primary" href="https://wa.me/51946139670?text=Hola%20D%27%20Carlitos%2C%20quiero%20reservar%20una%20mesa%20para%20visitar%20el%20restaurante." target="_blank" rel="noreferrer">Reservar mi mesa <ChevronRight size={17}/></a><span>Respuesta rápida · 946 139 670</span><a className="event-note" href="https://wa.me/51946139670?text=Hola%20D%27%20Carlitos%2C%20quiero%20informaci%C3%B3n%20sobre%20eventos." target="_blank" rel="noreferrer">¿Planeas un evento? Consúltanos</a></div></div></section>
+      <section id="reservas" className="reserve"><div className="container"><div className="reserve-head"><div><p className="section-kicker">RESERVAS</p><h2>Primero vienes a disfrutar.<br/><em>Después, vuelves a celebrar.</em></h2></div><p>Elige cómo quieres vivir D' Carlitos. Para una visita, reserva tu mesa. Para una fecha especial, conversemos sobre el espacio para eventos.</p></div><div className="reserve-grid"><article className="reserve-card reserve-card-main"><span className="reserve-number">01</span><div><h3>Una mesa para disfrutar</h3><p>Ven con tu familia, pareja o amigos y asegura tu lugar para comer rico, respirar aire fresco y pasarla bien.</p><a className="btn btn-primary" href="https://wa.me/51946139670?text=Hola%20D%27%20Carlitos%2C%20quiero%20reservar%20una%20mesa%20para%20visitar%20el%20restaurante." target="_blank" rel="noreferrer">Reservar mi mesa <ChevronRight size={17}/></a><small>946 139 670 · Respuesta rápida</small></div></article><article className="reserve-card reserve-card-event"><span className="reserve-number">02</span><div><span className="card-overline">EVENTOS SOCIALES Y CORPORATIVOS</span><h3>Un espacio para tu fecha</h3><p>Aniversarios, celebraciones familiares, Navidad, Año Nuevo o encuentros de empresa en un ambiente independiente.</p><a className="event-note" href="https://wa.me/51946139670?text=Hola%20D%27%20Carlitos%2C%20quiero%20informaci%C3%B3n%20sobre%20un%20evento." target="_blank" rel="noreferrer">Consultar por un evento <ChevronRight size={15}/></a></div></article></div></div></section>
       <section className="find"><div className="container"><div className="find-heading"><div><p className="section-kicker">ENCUÉNTRANOS</p><h2>El mejor plan<br/><em>está más cerca de lo que crees</em></h2></div><p>Ven a Sunampe y regálate un día diferente entre comida peruana, áreas verdes y aire fresco.</p></div><div className="find-grid"><div className="location-card"><div className="location-top"><div className="pin">⌖</div><span className="open-badge"><i/> Abierto fines de semana</span></div><h3>D' Carlitos</h3><p className="location-tagline">Restaurante campestre</p><div className="location-details"><div><span className="detail-icon">⌖</span><p><b>Dirección</b><br/>C. Magnolias 691, Sunampe 11702</p></div><div><span className="detail-icon">◷</span><p><b>Atención</b><br/>Sábados y domingos</p></div></div><a className="btn btn-primary map-link" href="https://maps.app.goo.gl/xmhj5GmTanUcYP9q7" target="_blank" rel="noreferrer">Cómo llegar <ChevronRight size={15}/></a><small>Abre la ubicación en Google Maps</small></div><div className="map-frame"><div className="map-label"><span>Estamos aquí</span><b>D' Carlitos</b></div><iframe title="Ubicación de Restaurante Campestre D' Carlitos" src="https://www.google.com/maps?q=Restaurante%20Campestre%20D%27Carlitos%2C%20C.%20Magnolias%20691%2C%20Sunampe%2011702&output=embed" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /></div></div></div></section>
     </main>
 
