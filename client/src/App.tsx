@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ArrowDown, ChevronRight, Instagram, Menu, Phone, Star, X } from "lucide-react";
 
 const heroImage = "https://res.cloudinary.com/dqv3jpzxg/image/upload/v1764903333/43c1d495-173e-41b8-b585-8409ba6ef086.png";
-const logo = "https://res.cloudinary.com/dqv3jpzxg/image/upload/v1773542273/bc758076-97d3-4a02-9bd0-af28f5bf5a66_erqjtl.png";
+const logo = "/manus-storage/dcarlitos-logo_66d57ccb.png";
 
 const essenceCards = [
   ["Aire libre de verdad", "Jardines, sombra y espacio para desconectarte de la rutina.", "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1000&q=85", "Jardines amplios y mesas al aire libre"],
