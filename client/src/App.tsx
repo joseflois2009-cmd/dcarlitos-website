@@ -24,6 +24,11 @@ const testimonials = [
   ["Roberto Sánchez", "Cliente habitual", "El ambiente campestre es único. Se respira paz y tranquilidad mientras disfrutas de platos tradicionales peruanos.", "Roberto"],
   ["Lucía Fernández", "Reunión de amigos", "Excelente lugar para reunirse con amigos. La música en vivo le da un toque especial a la experiencia.", "Lucia"],
 ];
+const eventTypes = [
+  ["Celebraciones sociales", "Cumpleaños, aniversarios, bautizos y reuniones familiares con espacios para disfrutar sin apuros.", "✦"],
+  ["Eventos corporativos", "Almuerzos de equipo, integraciones y celebraciones empresariales en un entorno diferente.", "⌁"],
+  ["Momentos a tu medida", "Te ayudamos a elegir el espacio y la experiencia ideal según el tamaño y estilo de tu evento.", "♧"],
+];
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -38,19 +43,22 @@ function App() {
       <button className="mobile-menu" aria-label="Abrir menú" onClick={() => setOpen(!open)}>{open ? <X/> : <Menu/>}</button>
     </div></nav>
 
+    <div className="conversion-bar"><span>Agenda tu próxima celebración</span><a href="#reservas">Consulta disponibilidad <ChevronRight size={14}/></a></div>
     <main>
       <section id="inicio" className="hero" style={{backgroundImage:`url(${heroImage})`}}><div className="hero-shade"/><div className="hero-content">
-        <p className="eyebrow">RESTAURANTE CAMPESTRE</p><h1>D' Carlitos</h1><p className="hero-sub">Un Lugar Especial y Diferente</p>
-        <div className="hero-actions"><a className="btn btn-primary" href="#reservas">Reservar ahora</a><a className="btn btn-outline" href="#menu">Ver Menú</a></div>
+        <p className="eyebrow">RESTAURANTE CAMPESTRE · ICA</p><h1>Tu mejor evento<br/><em>empieza aquí</em></h1><p className="hero-sub">Comida peruana, naturaleza y momentos que todos recordarán.</p>
+        <div className="hero-actions"><a className="btn btn-primary" href="#reservas">Quiero reservar</a><a className="btn btn-outline" href="#eventos">Ver opciones</a></div><p className="hero-proof"><Star size={15} fill="currentColor"/> El lugar favorito para compartir en familia y celebrar diferente</p>
       </div><a className="scroll-cue" href="#nosotros" aria-label="Desplazarse"><ArrowDown size={22}/></a></section>
 
       <section id="nosotros" className="essence section-muted"><div className="container"><p className="section-kicker">NUESTRA ESENCIA</p><h2>Una experiencia que va más allá del plato</h2><div className="feature-grid">{features.map(([title,body,icon])=><article className="feature" key={title}><div className="feature-icon">{icon}</div><h3>{title}</h3><p>{body}</p></article>)}</div></div></section>
+
+      <section id="eventos" className="events"><div className="container"><p className="section-kicker">CELEBRA CON NOSOTROS</p><h2>Un escenario especial para<br/><em>momentos importantes</em></h2><p className="section-lead">Tú trae la ocasión. Nosotros ponemos el sabor, el espacio y la atención para que solo te dediques a disfrutar.</p><div className="event-grid">{eventTypes.map(([title,body,icon])=><article className="event-card" key={title}><div className="event-number">{icon}</div><h3>{title}</h3><p>{body}</p><a href="#reservas">Quiero información <ChevronRight size={15}/></a></article>)}</div></div></section>
 
       <section id="menu" className="menu-section section-muted"><div className="container"><p className="section-kicker">NUESTRO MENÚ</p><h2>Platillos que enamoran</h2><div className="dish-grid">{dishes.map(([name,label,img])=><article className="dish" key={name}><div className="dish-image"><img src={img} alt={name}/><span>{label}</span></div><h3>{name}</h3></article>)}</div><a className="btn btn-primary menu-btn" href="#reservas">¡Quiero Probarlos! <ChevronRight size={17}/></a></div></section>
 
       <section className="reviews"><div className="container"><h2>Lo que dicen nuestros clientes</h2><p className="section-lead">Experiencias reales de familias que nos visitan cada fin de semana</p><div className="review-grid">{testimonials.map(([name,role,quote,seed])=><article className="review" key={name}><div className="review-stars">{[1,2,3,4,5].map(i=><Star key={i} size={15} fill="currentColor"/>)}</div><p>“{quote}”</p><div className="reviewer"><img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${seed}`} alt={name}/><div><h3>{name}</h3><span>{role}</span></div></div></article>)}</div></div></section>
 
-      <section id="reservas" className="reserve"><div className="container"><p className="section-kicker">RESERVACIONES</p><h2>¿Listo para una experiencia inolvidable?</h2><p>Reserva tu mesa hoy y disfruta de la mejor comida peruana en un ambiente único</p><a className="btn btn-primary" href="https://wa.me/51998389023" target="_blank" rel="noreferrer">Reservar mesa <ChevronRight size={17}/></a></div></section>
+      <section id="reservas" className="reserve"><div className="container reserve-inner"><div><p className="section-kicker">RESERVA TU FECHA</p><h2>Haz que tu próxima reunión sea la que todos recuerden</h2><p>Cuéntanos qué estás celebrando y te ayudamos a preparar una experiencia a la medida.</p></div><div className="reserve-actions"><a className="btn btn-primary" href="https://wa.me/51998389023?text=Hola%20D%27%20Carlitos%2C%20quiero%20consultar%20una%20reserva%20para%20mi%20evento." target="_blank" rel="noreferrer">Hablar por WhatsApp <ChevronRight size={17}/></a><span>Respuesta rápida · 998 389 023</span></div></div></section>
       <section className="find"><div className="container"><p className="section-kicker">ENCUÉNTRANOS</p><h2>Visítanos en nuestro restaurante campestre</h2><div className="find-grid"><div className="location-card"><div className="pin">⌖</div><h3>D' Carlitos</h3><p>Un Lugar Especial y Diferente</p><p>Restaurante Campestre, Ica, Perú</p><p>Sábados y Domingos</p></div><div className="map-art"><div className="map-road road-a"/><div className="map-road road-b"/><span>ICA</span><div className="map-pin">●</div></div></div></div></section>
     </main>
 
