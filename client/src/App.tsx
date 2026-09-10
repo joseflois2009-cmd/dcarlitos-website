@@ -25,9 +25,9 @@ const testimonials = [
   ["Lucía Fernández", "Reunión de amigos", "Excelente lugar para reunirse con amigos. La música en vivo le da un toque especial a la experiencia.", "Lucia"],
 ];
 const visitHighlights = [
-  ["Almuerzo en familia", "Disfruta platos peruanos, áreas verdes y un espacio pensado para compartir con quienes más quieres.", "✦"],
-  ["Naturaleza y aire libre", "Ven a desconectarte de la rutina entre jardines, árboles, juegos y un ambiente fresco para todas las edades.", "⌁"],
-  ["Un fin de semana diferente", "Música en vivo, piscina, granja y momentos especiales para convertir una visita en un recuerdo.", "♧"],
+  ["Llegas sin apuro", "Deja atrás la ciudad y encuentra un espacio amplio, fresco y rodeado de naturaleza para pasar el día.", "01"],
+  ["Eliges tu momento", "Una mesa para conversar, áreas verdes para los niños y rincones para disfrutar a tu propio ritmo.", "02"],
+  ["Te quedas por la experiencia", "Platos peruanos, piscina, juegos y música en vivo para que el almuerzo se convierta en un plan completo.", "03"],
 ];
 
 function App() {
@@ -50,9 +50,11 @@ function App() {
         <div className="hero-actions"><a className="btn btn-primary" href="#reservas">Quiero visitar</a><a className="btn btn-outline" href="#experiencia">Conoce el lugar</a></div><p className="hero-proof"><Star size={15} fill="currentColor"/> Un plan diferente para compartir en familia</p>
       </div><a className="scroll-cue" href="#nosotros" aria-label="Desplazarse"><ArrowDown size={22}/></a></section>
 
+      <section className="visit-strip"><div className="container visit-strip-inner"><div><span className="strip-label">TU PRÓXIMO PLAN</span><strong>Un domingo que sí se disfruta</strong></div><div className="strip-fact"><span>01</span><p><b>Sábados y domingos</b><br/>Ven a pasar el día con los tuyos</p></div><div className="strip-fact"><span>02</span><p><b>Para todas las edades</b><br/>Comida, naturaleza y entretenimiento</p></div><a href="#reservas" className="strip-link">Reserva tu mesa <ChevronRight size={15}/></a></div></section>
+
       <section id="nosotros" className="essence section-muted"><div className="container"><p className="section-kicker">NUESTRA ESENCIA</p><h2>Una experiencia que va más allá del plato</h2><div className="feature-grid">{features.map(([title,body,icon])=><article className="feature" key={title}><div className="feature-icon">{icon}</div><h3>{title}</h3><p>{body}</p></article>)}</div></div></section>
 
-      <section id="experiencia" className="events"><div className="container"><p className="section-kicker">VEN A VIVIRLO</p><h2>Más que un almuerzo,<br/><em>un día para recordar</em></h2><p className="section-lead">Aquí vienes a comer rico, respirar aire fresco y disfrutar el tiempo con tu familia y amigos.</p><div className="event-grid">{visitHighlights.map(([title,body,icon])=><article className="event-card" key={title}><div className="event-number">{icon}</div><h3>{title}</h3><p>{body}</p><a href="#menu">Ver el menú <ChevronRight size={15}/></a></article>)}</div></div></section>
+      <section id="experiencia" className="events"><div className="container"><p className="section-kicker">ASÍ SE VIVE</p><h2>Más que un almuerzo,<br/><em>un día para recordar</em></h2><p className="section-lead">Aquí vienes a comer rico, respirar aire fresco y disfrutar el tiempo con tu familia y amigos.</p><div className="event-grid">{visitHighlights.map(([title,body,icon])=><article className="event-card" key={title}><div className="event-number">{icon}</div><h3>{title}</h3><p>{body}</p><a href="#menu">Ver el menú <ChevronRight size={15}/></a></article>)}</div></div></section>
 
       <section id="menu" className="menu-section section-muted"><div className="container"><p className="section-kicker">NUESTRO MENÚ</p><h2>Platillos que enamoran</h2><div className="dish-grid">{dishes.map(([name,label,img])=><article className="dish" key={name}><div className="dish-image"><img src={img} alt={name}/><span>{label}</span></div><h3>{name}</h3></article>)}</div><a className="btn btn-primary menu-btn" href="#reservas">¡Quiero Probarlos! <ChevronRight size={17}/></a></div></section>
 
