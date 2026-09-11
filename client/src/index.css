@@ -86,3 +86,8 @@ footer{background:#18181b;color:#fafafa;padding:0}.footer-grid{grid-template-col
 
 /* Clean event CTA after visual-editor normalization */
 .reserve-card-event .event-note{display:inline-flex;align-items:center;gap:6px;width:159px;margin-top:2px;padding:0;background:#7b131e;color:#fff;border:0;border-radius:0;font-size:12px;font-weight:700;text-decoration:none;justify-content:flex-start}.reserve-card-event .event-note:hover{background:#000;color:#fff}
+
+/* Event CTA as text link, not a button */
+.reserve-card p{text-align:left;display:block}.reserve-card small{text-align:left;display:inline-flex}.reserve-card-event .event-note{display:inline-flex;width:auto;margin-top:2px;padding:0;background:transparent;color:#741d1f;border:0;border-radius:0;font-size:12px;font-weight:700;text-align:left;text-decoration:none}.reserve-card-event .event-note:hover{background:transparent;color:#000;text-decoration:underline;text-underline-offset:4px}
+
+.reserve-card p{text-align:left!important;display:block!important}
