@@ -105,3 +105,7 @@ footer{background:#18181b;color:#fafafa;padding:0}.footer-grid{grid-template-col
 
 /* Center the Reservations heading only */
 .reserve-head{justify-content:center!important;align-items:center!important;text-align:center!important}.reserve-head>div{text-align:center!important}.reserve-head .section-kicker,.reserve-head h2{text-align:center!important}.reserve-head>p{display:none}
+
+/* Infinite testimonials marquee */
+.review-viewport{width:100%;overflow:hidden;position:relative;margin-top:34px;padding:4px 0 12px}.review-track{display:flex;align-items:stretch;gap:16px;width:max-content;animation:reviews-marquee 78s linear infinite;will-change:transform}.review-slide{flex:0 0 clamp(280px,31vw,390px);width:clamp(280px,31vw,390px);min-height:238px}.review-track:hover{animation-play-state:paused}.review-slide p{min-height:92px}.review-stars svg{flex:none}.reviews{overflow:hidden}@keyframes reviews-marquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@media(max-width:640px){.review-viewport{margin-top:26px}.review-track{animation-duration:56s}.review-slide{flex-basis:calc(100vw - 48px);width:calc(100vw - 48px);min-height:250px}.review-slide p{min-height:110px}}
