@@ -69,3 +69,7 @@ footer{background:#18181b;color:#fafafa;padding:0}.footer-grid{grid-template-col
 /* Fine-tune spacing between proof line and arrow */
 .hero-proof{margin-bottom:24px}
 @media(max-width:640px){.hero-proof{margin-bottom:25px}}
+
+/* Visual editor corrections */
+.events h2{text-align:center}.events .section-lead{text-align:center;margin-left:auto;margin-right:auto}.reserve-head{justify-content:center;text-align:center}.reserve-head .section-kicker{text-align:center}.reserve-head h2{text-align:center}.reserve-card>div:last-child{position:relative;z-index:1;min-width:0}.reserve-card h3{line-height:1.15;margin-bottom:14px}.reserve-card p{line-height:1.65;margin-bottom:22px;position:relative}.reserve-card small{width:100%;text-align:center}.reserve-card-main .btn{display:flex;margin-left:auto;margin-right:auto}.reserve-card-event .event-note{margin-top:2px}.find-heading{justify-content:center}.find-heading .section-kicker,.find-heading h2{text-align:center}.hero-proof{margin-bottom:12px}
+@media(max-width:640px){.events h2,.events .section-lead,.reserve-head h2{text-align:center}.reserve-card{align-items:flex-start}.reserve-card h3{margin-bottom:13px}.reserve-card p{margin-bottom:20px}.hero-proof{margin-bottom:13px}}
