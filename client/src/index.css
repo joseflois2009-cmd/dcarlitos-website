@@ -57,3 +57,7 @@ footer{background:#18181b;color:#fafafa;padding:0}.footer-grid{grid-template-col
 @media(max-width:640px){.hero-content{padding-bottom:82px}.hero-actions{gap:13px}.hero-proof{margin-top:28px;line-height:1.5;padding:0 18px}.scroll-cue{bottom:18px}}
 
 .conversion-bar a{border-bottom:0!important;box-shadow:none;text-decoration:none!important}.conversion-bar a:hover{border-bottom:0!important;text-decoration:none!important}
+
+/* Clear hero ending: social proof first, scroll indicator last */
+.hero-proof{margin-bottom:76px;position:relative;z-index:3}.scroll-cue{bottom:24px;box-shadow:0 10px 24px rgba(0,0,0,.22)}
+@media(max-width:640px){.hero-proof{margin-bottom:78px}.scroll-cue{bottom:18px}}
