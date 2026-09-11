@@ -61,3 +61,7 @@ footer{background:#18181b;color:#fafafa;padding:0}.footer-grid{grid-template-col
 /* Clear hero ending: social proof first, scroll indicator last */
 .hero-proof{margin-bottom:76px;position:relative;z-index:3}.scroll-cue{bottom:24px;box-shadow:0 10px 24px rgba(0,0,0,.22)}
 @media(max-width:640px){.hero-proof{margin-bottom:78px}.scroll-cue{bottom:18px}}
+
+/* Minimal scroll cue: arrow only, with half the previous spacing */
+.hero-proof{margin-bottom:38px}.scroll-cue{width:auto;height:auto;padding:0;border:0;background:transparent;box-shadow:none;border-radius:0}.scroll-cue:hover{transform:translateY(4px);background:transparent;border-color:transparent}.scroll-cue svg{width:24px;height:24px;stroke-width:1.6;filter:drop-shadow(0 3px 5px rgba(0,0,0,.35))}
+@media(max-width:640px){.hero-proof{margin-bottom:39px}.scroll-cue{bottom:18px}}
