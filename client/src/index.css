@@ -83,3 +83,6 @@ footer{background:#18181b;color:#fafafa;padding:0}.footer-grid{grid-template-col
 /* Encuéntranos: map-only layout */
 .find-grid-map{display:block}.find-grid-map .map-frame{width:100%;height:420px}.find-grid-map .map-frame iframe{height:100%}
 @media(max-width:640px){.find-grid-map .map-frame{height:310px}}
+
+/* Clean event CTA after visual-editor normalization */
+.reserve-card-event .event-note{display:inline-flex;align-items:center;gap:6px;width:159px;margin-top:2px;padding:0;background:#7b131e;color:#fff;border:0;border-radius:0;font-size:12px;font-weight:700;text-decoration:none;justify-content:flex-start}.reserve-card-event .event-note:hover{background:#000;color:#fff}
