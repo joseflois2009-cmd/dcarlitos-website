@@ -102,3 +102,6 @@ footer{background:#18181b;color:#fafafa;padding:0}.footer-grid{grid-template-col
 
 /* Primary table reservation CTA only */
 .reserve-action-primary{background:#b51d2a!important;color:#ffa8b1!important}.reserve-action-primary:hover{background:#9f1722!important;color:#ffa8b1!important}
+
+/* Center the Reservations heading only */
+.reserve-head{justify-content:center!important;align-items:center!important;text-align:center!important}.reserve-head>div{text-align:center!important}.reserve-head .section-kicker,.reserve-head h2{text-align:center!important}.reserve-head>p{display:none}
