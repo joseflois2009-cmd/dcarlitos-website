@@ -79,3 +79,7 @@ footer{background:#18181b;color:#fafafa;padding:0}.footer-grid{grid-template-col
 
 /* Extra breathing room inside reservation cards */
 .reserve-card h3{margin-bottom:20px}.reserve-card p{margin-top:0;padding-top:2px}.reserve-card-event .card-overline{margin-bottom:16px}
+
+/* Encuéntranos: map-only layout */
+.find-grid-map{display:block}.find-grid-map .map-frame{width:100%;height:420px}.find-grid-map .map-frame iframe{height:100%}
+@media(max-width:640px){.find-grid-map .map-frame{height:310px}}
