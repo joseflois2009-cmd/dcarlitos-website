@@ -99,3 +99,6 @@ footer{background:#18181b;color:#fafafa;padding:0}.footer-grid{grid-template-col
 
 /* Final reservation refinement from visual editor */
 .reserve-card h3{margin-bottom:22px}.reserve-card p{margin-top:0;margin-bottom:24px}.reserve-action,.reserve-action-secondary{background:#e1a55e!important;color:#2a170e!important}.reserve-action:hover,.reserve-action-secondary:hover{background:#f0bd78!important;color:#2a170e!important}
+
+/* Primary table reservation CTA only */
+.reserve-action-primary{background:#b51d2a!important;color:#ffa8b1!important}.reserve-action-primary:hover{background:#9f1722!important;color:#ffa8b1!important}
