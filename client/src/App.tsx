@@ -40,7 +40,7 @@ function App() {
     <nav className="nav"><div className="nav-inner">
       <a href="#inicio" className="brand" onClick={go}><img src={logo} alt="D' Carlitos Logo" /></a>
       <div className={`nav-links ${open ? "open" : ""}`}>
-        <a href="#inicio" onClick={go}>Inicio</a><a href="#menu" onClick={go}>Menú</a><a href="#nosotros" onClick={go}>Nosotros</a>
+        <a href="#inicio" onClick={go}>Inicio</a><a href="#nosotros" onClick={go}>Nosotros</a>
         <a className="nav-cta" href="#reservas" onClick={go}><Phone size={15}/> Reservar Mesa</a>
       </div>
       <button className="mobile-menu" aria-label="Abrir menú" onClick={() => setOpen(!open)}>{open ? <X/> : <Menu/>}</button>
