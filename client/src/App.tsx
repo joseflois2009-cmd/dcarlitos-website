@@ -5,9 +5,9 @@ const heroImage = "https://res.cloudinary.com/dqv3jpzxg/image/upload/v1764903333
 const logo = "/manus-storage/dcarlitos-logo-oficial_571ed369.png";
 
 const essenceCards = [
-  ["Aire libre de verdad", "Jardines, sombra y espacio para desconectarte de la rutina.", "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1000&q=85", "Jardines amplios y mesas al aire libre"],
-  ["Un plan para todos", "Juegos, piscina y naturaleza para que cada integrante disfrute a su manera.", "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=1000&q=85", "Familia disfrutando una tarde al aire libre"],
-  ["Sabor que se comparte", "Platos peruanos servidos para conversar, celebrar y quedarse un poco más.", "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85", "Plato peruano servido en una mesa familiar"],
+  ["Aire libre de verdad", "Jardines, sombra y espacio para desconectarte de la rutina.", "https://res.cloudinary.com/hpg2hzc4/image/upload/v1789167648/12c9b26c-af77-4b66-8e29-9869ed13eb42.jpg", "Imagen de áreas verdes y aire libre en D' Carlitos"],
+  ["Un plan para todos", "Juegos, piscina y naturaleza para que cada integrante disfrute a su manera.", "https://res.cloudinary.com/hpg2hzc4/image/upload/v1789167626/a97ff5b4-39e4-4b41-a282-51a86d4a616f.jpg", "Imagen de una experiencia familiar en D' Carlitos"],
+  ["Sabor que se comparte", "Platos peruanos servidos para conversar, celebrar y quedarse un poco más.", "https://res.cloudinary.com/hpg2hzc4/image/upload/v1789167604/WhatsApp_Image_2026-09-11_at_5.54.51_PM.jpg", "Imagen de gastronomía peruana de D' Carlitos"],
 ];
 const dishes = [
   ["Carapulcra con Sopa Seca y Chicharrón", "Especialidad", "https://d-carlitos-web-launch.vercel.app/assets/combinado-criollo-C9MkQBuq.jpg"],
@@ -54,7 +54,7 @@ function App() {
 
       <section className="visit-strip"><div className="container visit-strip-inner"><div><span className="strip-label">TU PRÓXIMA VISITA</span><strong>Hazle espacio a un buen día</strong></div><div className="strip-fact"><span>01</span><p><b>Sábados y domingos</b><br/>Una mesa lista para compartir</p></div><div className="strip-fact"><span>02</span><p><b>Visita o celebra</b><br/>Restaurante abierto y eventos a medida</p></div><a href="#reservas" className="strip-link">Separar una mesa <ChevronRight size={15}/></a></div></section>
 
-      <section id="nosotros" className="essence section-muted"><div className="container essence-heading"><div><p className="section-kicker">NUESTRA ESENCIA</p><h2>Vienes por la comida.<br/><em>Te quedas por el día.</em></h2></div></div><div className="container essence-grid">{essenceCards.map(([title,body,img,alt])=><article className="essence-card" key={title} style={{backgroundImage:`linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.78)),url(${img})`}} aria-label={alt}><div><span className="essence-photo-note">{alt}</span><h3>{title}</h3><p>{body}</p></div></article>)}</div></section>
+      <section id="nosotros" className="essence section-muted"><div className="container essence-heading"><div><p className="section-kicker">NUESTRA ESENCIA</p><h2>Vienes por la comida.<br/><em>Te quedas por el día.</em></h2></div></div><div className="container essence-grid">{essenceCards.map(([title,body,img,alt])=><article className="essence-card" key={title} style={{backgroundImage:`linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.78)),url(${img})`}} aria-label={alt}><div><h3>{title}</h3><p>{body}</p></div></article>)}</div></section>
 
       <section id="experiencia" className="events"><div className="container"><p className="section-kicker">ASÍ SE VIVE</p><h2>Más que un almuerzo,<br/><em>un día para recordar</em></h2><p className="section-lead">Aquí vienes a comer rico, respirar aire fresco y disfrutar el tiempo con tu familia y amigos.</p><div className="event-grid">{visitHighlights.map(([title,body,icon])=><article className="event-card" key={title}><div className="event-number">{icon}</div><h3>{title}</h3><p>{body}</p><a href="#reservas">Planifica tu visita <ChevronRight size={15}/></a></article>)}</div></div></section>
 
