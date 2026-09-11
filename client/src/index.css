@@ -65,3 +65,7 @@ footer{background:#18181b;color:#fafafa;padding:0}.footer-grid{grid-template-col
 /* Minimal scroll cue: arrow only, with half the previous spacing */
 .hero-proof{margin-bottom:38px}.scroll-cue{width:auto;height:auto;padding:0;border:0;background:transparent;box-shadow:none;border-radius:0}.scroll-cue:hover{transform:translateY(4px);background:transparent;border-color:transparent}.scroll-cue svg{width:24px;height:24px;stroke-width:1.6;filter:drop-shadow(0 3px 5px rgba(0,0,0,.35))}
 @media(max-width:640px){.hero-proof{margin-bottom:39px}.scroll-cue{bottom:18px}}
+
+/* Fine-tune spacing between proof line and arrow */
+.hero-proof{margin-bottom:24px}
+@media(max-width:640px){.hero-proof{margin-bottom:25px}}
