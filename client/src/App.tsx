@@ -4,6 +4,7 @@ import { ArrowDown, ChevronRight, Instagram, Menu, Phone, Star, X } from "lucide
 const heroImages = [
   "https://res.cloudinary.com/dqv3jpzxg/image/upload/v1764903333/43c1d495-173e-41b8-b585-8409ba6ef086.png",
   "/manus-storage/hero-juegos_d4e2f0da.jpg",
+  "/manus-storage/hero-atencion_8e6c41f0.jpg",
 ];
 const logo = "/manus-storage/dcarlitos-logo-oficial_571ed369.png";
 
