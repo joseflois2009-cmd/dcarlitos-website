@@ -133,3 +133,6 @@ footer{background:#18181b;color:#fafafa;padding:0}.footer-grid{grid-template-col
   .strip-link{grid-column:1/-1;justify-self:center;font-size:10px;margin-top:1px}
   .section-muted h2,.reviews h2{font-size:27px}.section-lead{font-size:12.5px}
 }
+
+/* Mobile-only: place the visit CTA below both visit facts */
+@media(max-width:640px){.visit-strip-inner>.strip-link{grid-column:1/-1;grid-row:3;justify-self:center;margin-top:3px}.visit-strip-inner>.strip-fact{grid-row:2}}
