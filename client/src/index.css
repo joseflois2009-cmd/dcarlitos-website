@@ -109,3 +109,7 @@ footer{background:#18181b;color:#fafafa;padding:0}.footer-grid{grid-template-col
 /* Infinite testimonials marquee */
 .review-viewport{width:100%;overflow:hidden;position:relative;margin-top:34px;padding:4px 0 12px}.review-track{display:flex;align-items:stretch;gap:16px;width:max-content;animation:reviews-marquee 78s linear infinite;will-change:transform}.review-slide{flex:0 0 clamp(280px,31vw,390px);width:clamp(280px,31vw,390px);min-height:238px}.review-track:hover{animation-play-state:paused}.review-slide p{min-height:92px}.review-stars svg{flex:none}.reviews{overflow:hidden}@keyframes reviews-marquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
 @media(max-width:640px){.review-viewport{margin-top:26px}.review-track{animation-duration:56s}.review-slide{flex-basis:calc(100vw - 48px);width:calc(100vw - 48px);min-height:250px}.review-slide p{min-height:110px}}
+
+/* Hero image carousel controls */
+.hero-dots{position:absolute;left:50%;bottom:62px;z-index:5;display:flex;gap:8px;transform:translateX(-50%)}.hero-dots button{width:7px;height:7px;padding:0;border:1px solid rgba(255,255,255,.75);border-radius:999px;background:transparent;opacity:.72;transition:transform .2s ease,background-color .2s ease,opacity .2s ease}.hero-dots button.active{background:#e1a55e;border-color:#e1a55e;transform:scale(1.35);opacity:1}.hero-dots button:hover{opacity:1}
+@media(max-width:640px){.hero-dots{bottom:58px}}

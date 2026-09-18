@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { ArrowDown, ChevronRight, Instagram, Menu, Phone, Star, X } from "lucide-react";
 
-const heroImage = "https://res.cloudinary.com/dqv3jpzxg/image/upload/v1764903333/43c1d495-173e-41b8-b585-8409ba6ef086.png";
+const heroImages = [
+  "https://res.cloudinary.com/dqv3jpzxg/image/upload/v1764903333/43c1d495-173e-41b8-b585-8409ba6ef086.png",
+  "/manus-storage/hero-juegos_d4e2f0da.jpg",
+];
 const logo = "/manus-storage/dcarlitos-logo-oficial_571ed369.png";
 
 const essenceCards = [
@@ -32,6 +35,7 @@ const visitHighlights = [
 
 function App() {
   const [open, setOpen] = useState(false);
+  const [heroIndex, setHeroIndex] = useState(0);
   const go = () => setOpen(false);
   useEffect(() => {
     const root = document.documentElement;
@@ -41,6 +45,10 @@ function App() {
     };
     window.addEventListener("pointermove", move, { passive: true });
     return () => window.removeEventListener("pointermove", move);
+  }, []);
+  useEffect(() => {
+    const timer = window.setInterval(() => setHeroIndex((current) => (current + 1) % heroImages.length), 7000);
+    return () => window.clearInterval(timer);
   }, []);
   return <div className="site">
     <nav className="nav"><div className="nav-inner">
@@ -53,10 +61,10 @@ function App() {
 
     <div className="conversion-bar"><span>Este fin de semana te esperamos en D' Carlitos</span><a href="#reservas">Reserva tu mesa <ChevronRight size={14}/></a></div>
     <main>
-      <section id="inicio" className="hero" style={{backgroundImage:`url(${heroImage})`}}><div className="hero-shade"/><div className="hero-orb"/><div className="hero-content">
+      <section id="inicio" className="hero" style={{backgroundImage:`url(${heroImages[heroIndex]})`}}><div className="hero-shade"/><div className="hero-orb"/><div className="hero-content">
         <p className="eyebrow">D' CARLITOS · SUNAMPE, ICA</p><h1>Un día para<br/><em>comer, respirar y quedarse.</em></h1><p className="hero-sub">Una mesa entre jardines, platos peruanos y el tiempo que se disfruta mejor en compañía.</p>
         <div className="hero-actions"><a className="btn btn-primary" href="#reservas">Reservar una mesa</a><a className="btn btn-outline" href="#experiencia">Descubrir la experiencia</a></div><p className="hero-proof"><Star size={15} fill="currentColor"/> El plan campestre que empieza en la mesa</p>
-      </div><a className="scroll-cue" href="#nosotros" aria-label="Desplazarse"><ArrowDown size={22}/></a></section>
+      </div><div className="hero-dots" aria-label="Imágenes del hero">{heroImages.map((_, index)=><button key={index} className={heroIndex === index ? "active" : ""} onClick={() => setHeroIndex(index)} aria-label={`Ver imagen ${index + 1}`} />)}</div><a className="scroll-cue" href="#nosotros" aria-label="Desplazarse"><ArrowDown size={22}/></a></section>
 
       <section className="visit-strip"><div className="container visit-strip-inner"><div><span className="strip-label">TU PRÓXIMA VISITA</span><strong>Hazle espacio a un buen día</strong></div><div className="strip-fact"><span>01</span><p><b>Sábados y domingos</b><br/>Una mesa lista para compartir</p></div><div className="strip-fact"><span>02</span><p><b>Visita o celebra</b><br/>Restaurante abierto y eventos a medida</p></div><a href="#reservas" className="strip-link">Separar una mesa <ChevronRight size={15}/></a></div></section>
 
