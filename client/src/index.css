@@ -113,3 +113,6 @@ footer{background:#18181b;color:#fafafa;padding:0}.footer-grid{grid-template-col
 /* Hero image carousel controls */
 .hero-dots{position:absolute;left:50%;bottom:62px;z-index:5;display:flex;gap:8px;transform:translateX(-50%)}.hero-dots button{width:7px;height:7px;padding:0;border:1px solid rgba(255,255,255,.75);border-radius:999px;background:transparent;opacity:.72;transition:transform .2s ease,background-color .2s ease,opacity .2s ease}.hero-dots button.active{background:#e1a55e;border-color:#e1a55e;transform:scale(1.35);opacity:1}.hero-dots button:hover{opacity:1}
 @media(max-width:640px){.hero-dots{bottom:58px}}
+
+/* Visual editor refinements */
+.hero-dots{left:50%;right:auto;width:max-content;justify-content:center;align-items:center}.visit-strip{padding:16px 0}
