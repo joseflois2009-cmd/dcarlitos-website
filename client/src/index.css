@@ -139,3 +139,6 @@ footer{background:#18181b;color:#fafafa;padding:0}.footer-grid{grid-template-col
 
 /* Center hero scroll arrow */
 .scroll-cue{left:50%!important;right:auto!important}
+
+/* Supplied WhatsApp mark */
+.whatsapp img{width:27px;height:27px;object-fit:contain;display:block}

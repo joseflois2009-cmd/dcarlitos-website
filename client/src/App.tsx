@@ -82,7 +82,7 @@ function App() {
     </main>
 
     <footer><div className="container footer-grid"><div className="footer-brand"><img className="footer-logo" src={logo} alt="D' Carlitos"/><h3>Un Lugar Especial y Diferente</h3><p>Restaurante campestre en Sunampe, Ica.</p><p className="footer-days">Sábados y domingos</p><a className="footer-map-link" href="https://maps.app.goo.gl/xmhj5GmTanUcYP9q7" target="_blank" rel="noreferrer">Ver ubicación <ChevronRight size={14}/></a></div><div><h4>Explora</h4><a href="#inicio">Inicio</a><a href="#experiencia">La experiencia</a><a href="#menu">Favoritos de la casa</a><a href="#nosotros">Nuestra esencia</a></div><div><h4>Contacto</h4><a className="footer-phone" href="tel:+51946139670">946 139 670</a><a href="https://maps.app.goo.gl/xmhj5GmTanUcYP9q7" target="_blank" rel="noreferrer">Cómo llegar</a><h4 className="follow">Síguenos</h4><div className="social"><a href="https://instagram.com/dcarlitoscampestre/" target="_blank" rel="noreferrer"><Instagram size={18}/></a><a href="https://tiktok.com/@dcarlitos.chincha" target="_blank" rel="noreferrer"><span className="tiktok">♪</span></a><a href="https://facebook.com/restaurantedcarlitos/" target="_blank" rel="noreferrer">f</a></div></div></div><div className="copyright"><span>© 2025 D' Carlitos.</span><span>Restaurante Campestre en Sunampe, Ica</span></div></footer>
-    <a className="whatsapp" href="https://wa.me/51946139670" target="_blank" rel="noreferrer" aria-label="WhatsApp">◔</a>
+    <a className="whatsapp" href="https://wa.me/51946139670" target="_blank" rel="noreferrer" aria-label="WhatsApp"><img src="https://res.cloudinary.com/hpg2hzc4/image/upload/v1789702582/c44d9948-1037-4712-a278-2d962284f079-removebg-preview.png" alt="WhatsApp" /></a>
   </div>
 }
 export default App;
