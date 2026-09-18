@@ -116,3 +116,20 @@ footer{background:#18181b;color:#fafafa;padding:0}.footer-grid{grid-template-col
 
 /* Visual editor refinements */
 .hero-dots{left:50%;right:auto;width:max-content;justify-content:center;align-items:center}.visit-strip{padding:16px 0}
+
+/* Mobile-only layout correction: hero typography and next-visit order */
+@media(max-width:640px){
+  .hero-content{width:calc(100% - 32px);max-width:100%;padding-bottom:74px}
+  .hero .eyebrow{font-size:9px;letter-spacing:.24em;margin-bottom:20px}
+  .hero h1{font-size:43px;line-height:1.02;letter-spacing:-.045em;max-width:100%;margin-bottom:20px}
+  .hero-sub{font-size:12px;line-height:1.6;margin:20px auto 24px;max-width:320px}
+  .hero-actions{width:175px;gap:11px}.hero .btn{font-size:12px;padding:13px 17px}
+  .hero-proof{font-size:10px;margin-top:24px;padding:0 8px}
+  .visit-strip{padding:16px 0}.visit-strip-inner{grid-template-columns:1fr 1fr;gap:13px 10px}
+  .visit-strip-inner>div:first-child{grid-column:1/-1;text-align:center;margin-bottom:2px}
+  .strip-label{font-size:8.5px;letter-spacing:.18em;margin-bottom:5px}
+  .visit-strip strong{font-size:16px;line-height:1.2}
+  .strip-fact{gap:6px;align-items:flex-start}.strip-fact>span{font-size:16px}.strip-fact p{font-size:8.5px;line-height:1.45}
+  .strip-link{grid-column:1/-1;justify-self:center;font-size:10px;margin-top:1px}
+  .section-muted h2,.reviews h2{font-size:27px}.section-lead{font-size:12.5px}
+}
