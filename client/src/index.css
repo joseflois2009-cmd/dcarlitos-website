@@ -136,3 +136,6 @@ footer{background:#18181b;color:#fafafa;padding:0}.footer-grid{grid-template-col
 
 /* Mobile-only: place the visit CTA below both visit facts */
 @media(max-width:640px){.visit-strip-inner>.strip-link{grid-column:1/-1;grid-row:3;justify-self:center;margin-top:3px}.visit-strip-inner>.strip-fact{grid-row:2}}
+
+/* Center hero scroll arrow */
+.scroll-cue{left:50%!important;right:auto!important}
