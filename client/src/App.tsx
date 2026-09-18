@@ -14,9 +14,9 @@ const essenceCards = [
   ["Sabor que se comparte", "Platos peruanos servidos para conversar, celebrar y quedarse un poco más.", "https://res.cloudinary.com/hpg2hzc4/image/upload/v1789167604/WhatsApp_Image_2026-09-11_at_5.54.51_PM.jpg", "Imagen de gastronomía peruana de D' Carlitos"],
 ];
 const dishes = [
-  ["Carapulcra con Sopa Seca y Chicharrón", "Especialidad", "https://d-carlitos-web-launch.vercel.app/assets/combinado-criollo-C9MkQBuq.jpg"],
-  ["Pollo a la Plancha", "Saludable", "https://d-carlitos-web-launch.vercel.app/assets/chicharron-5bqn_BlH.jpg"],
-  ["Torta de Vainilla", "Postre", "https://d-carlitos-web-launch.vercel.app/assets/papa-huancaina-WTWhCQrd.jpg"],
+  ["Carapulcra con Sopa Seca y Chicharrón", "Especialidad", "https://res.cloudinary.com/hpg2hzc4/image/upload/v1789701620/28e51d6e-28d9-456a-bf14-b24fb4a15a91.jpg"],
+  ["Pachamanca", "Especialidad", "https://res.cloudinary.com/hpg2hzc4/image/upload/v1789701697/8a328c7a-f584-45d0-abc8-0748a7ba56ec.jpg"],
+  ["Chancho a la Caja China", "Especialidad", "https://res.cloudinary.com/hpg2hzc4/image/upload/v1789701627/3197f676-d820-4267-bcdf-c48c14803a72.jpg"],
 ];
 const testimonials = [
   ["Pedro Antonio Falco Martinez", "5 estrellas · Hace 3 años", "Excelente restaurante campestre con buenas instalaciones, buena comida a precio razonable.", "Pedro", 5],
